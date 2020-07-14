@@ -2,24 +2,24 @@ let nome = "peao";
 
 switch (nome.toLowerCase()) {
     case "peao":
-        console.log("Anda para frente e para atrás");
+        console.log("Peão -> Apenas uma casa para frente, no primeiro movimento podem ser duas casas.");
         break;
     case "torre":
-        console.log("Anda para frente, para atrás e para os lados");
+        console.log("Torre ->Anda para frente, para atrás e para os lados");
         break;
     case "cavalo":
-        console.log("Anda em l para direita e para a esquerda");
+        console.log("Cavalo ->Anda em l para direita e para a esquerda");
         break;
     case "bispo":
-        console.log("Anda em diagonal para direita e esquerda");
+        console.log("Bispo->Anda em diagonal para direita e esquerda");
         break;
     case "rainha":
-        console.log("Anda para todas as direções e diagonais quantos espaços quiser");
+        console.log("Rainha->Anda para todas as direções e diagonais quantos espaços quiser");
         break;
     case "rei":
-        console.log("Anda para todas as direções e diagonais apenas uma casa");
+        console.log("Rei->Anda para todas as direções e diagonais apenas uma casa");
         break;
     default:
-        console.log("Deu ruim")
+        console.log("Deu erro")
         break;
 }
