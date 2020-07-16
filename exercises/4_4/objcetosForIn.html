@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trybe</title>
+</head>
+<body>
+<h1>Exercícios :</h1>
+<p>Bem-vinda, <span id="info_personagem"></span><br/></p>
+
+<q>Exercícios no console.</q>
+<script>
+
+// Criação do objeto info e  info1
+let info = {
+    personagem: 'Margarida',
+    origem: 'Pato Donald',
+    nota: 'Namorada do personagem principal nos quadrinhos do Pato Donald',
+    recorrente: 'Sim'
+};
+document.getElementById("info_personagem").innerHTML = info.personagem;
+
+/*Exe1*/
+console.log("Bem-vinda, "+ info.personagem);
+console.log("***********");
+/*Exe2*/
+console.log(info);
+console.log("***********");
+/*Exe3*/
+for (const i in info) {
+  console.log(i);
+}
+console.log("***********");
+/*Exe4*/
+for (const i in info) {
+  console.log(info[i]);
+}
+console.log("***********");
+/*Extra*/
+for (const i in info) {
+  console.log(`${i} = ${info[i]}`)
+}
+
+
+
+</script>
+</body>
+</html>
+
+  

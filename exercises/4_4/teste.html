@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Exercícios 5 :</h1>
+<p><span id="finale"></span><br/></p>
+</body>
+<q>Resposta no console também!</q>
+<script>
+    // Criação do objeto info e  info1
+let info = {
+    personagem: 'Margarida',
+    origem: 'Pato Donald',
+    nota: 'Namorada do personagem principal nos quadrinhos do Pato Donald',
+    recorrente: 'Sim'
+};
+const { personagem : p, origem: o,nota: n, recorrente: r  } = info;
+
+
+let info1 = {
+    personagem: 'Tio Patinhas',
+    origem: "Christmas on Bear Mountain, Dell's Four Color Comics #178",
+    nota: 'O último MacPatinhas',
+    recorrente: 'Sim'
+};
+const { personagem : p1, origem: o1,nota: n1, recorrente: r1  } = info1;
+
+/*Exe5 (Destructuring)*/
+if (r === 'Sim' && r1 === 'Sim') {
+    console.log(`${p} e ${p1} `+"\n"+`${o} e ${o1}`+"\n"+`${n}`+"\n"+`Ambos recorrentes `);
+    finale.resposta = `${p} e ${p1} `+"<br/>"+`${o} e ${o1}`+"<br/>"+`${n}`+"<br/>"+`Ambos recorrentes `;
+}else {
+    console.log(`${p} e ${p1} `+"\n"+`${o} e ${o1}`+"\n"+`${n}`)
+    finale.resposta = `${p} e ${p1} `+"<br/>"+`${o} e ${o1}`+"<br/>"+`${n}`;
+}
+
+document.getElementById("finale").innerHTML = finale.resposta;
+
+
+</script>
+</html>
