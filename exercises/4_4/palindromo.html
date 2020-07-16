@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>palindrome</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+function verificaPalindrome(word){
+    let palindrome = word.split('').reverse().join('');
+   
+    if (word === palindrome) {
+        return true;
+    } else {
+        return false;
+    }
+}
+console.log("É palíndrome (arara) => "+verificaPalindrome('arara'));
+console.log("É palíndrome (desenvolvimento) => "+verificaPalindrome('desenvolvimento'));
+
+
+
+
+</script>
+</html>
