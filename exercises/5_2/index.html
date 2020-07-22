@@ -88,6 +88,26 @@
      divSecondMain.className = 'left-content';
      divMain.appendChild(divSecondMain);
 
+     //6
+     let divThirdMain = document.createElement('div');
+     divThirdMain.className = 'right-content';
+     divMain.appendChild(divThirdMain); 
+
+     //7
+     let img = document.createElement('img');
+     img.src = 'https://picsum.photos/200';
+     img.className = 'small-image';
+     divSecondMain.appendChild(img);
+
+     //8
+     let ul = document.createElement('ul');
+     
+     for (let index = 1; index < 11; index++) {
+        let li = document.createElement('li');
+        ul.appendChild(li);         
+     }
+     divThirdMain.appendChild(ul);
+
     </script>
   </body>
 </html>
