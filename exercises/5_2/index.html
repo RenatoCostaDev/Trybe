@@ -53,11 +53,41 @@
       .main-content .description {
         text-align: center;
       }
+      .space {
+          margin: 15px;
+      }
     </style>
   </head>
   <body>
     <script>
-      // COLOQUE SEU CÓDIGO AQUI
+      //1
+      let hOne = document.createElement('h1');
+      hOne.innerHTML = 'Exercício 5.2 - JavaScript DOM';
+     // document.getElementsByTagName('body').appendChild(hOne);
+     document.body.appendChild(hOne);  
+
+     //2
+     let divMain = document.createElement('div');
+     divMain.className = 'main-content';
+     document.body.appendChild(divMain);
+
+     //3
+     let divCenter = document.createElement('div');
+     divCenter.className = 'center-content';
+     //divMain.firstChild = divCenter; 
+     //document.body.appendChild(divCenter);
+     divMain.appendChild(divCenter);
+
+     //4
+     let pCenter = document.createElement('p');
+     pCenter.innerHTML = `<strong>PULLEY BAND</strong><span class='space'></span>The band was formed upon vocalist Scott Radinsky's departure from Ten Foot Pole, brought about by that band's desire for a singer with a full-time focus on music (Radinsky was also a major-league relief pitcher and has played for the Los Angeles Dodgers, among others).`;
+     divCenter.appendChild(pCenter);
+
+     //5
+     let divSecondMain = document.createElement('div');
+     divSecondMain.className = 'left-content';
+     divMain.appendChild(divSecondMain);
+
     </script>
   </body>
 </html>
