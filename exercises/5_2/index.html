@@ -101,13 +101,47 @@
 
      //8
      let ul = document.createElement('ul');
-     
-     for (let index = 1; index < 11; index++) {
+     divThirdMain.appendChild(ul);
+     const arrayLi = ['Um','Dois','Três','Quatro','Cinco','Seis','Sete','Oito','Nove','Dez'];
+     for (let index = 0; index < 10; index++) {
         let li = document.createElement('li');
+        li.innerHTML = arrayLi[index];
         ul.appendChild(li);         
      }
-     divThirdMain.appendChild(ul);
+     //9
+     for (let index = 1; index <= 3; index++) {
+        let hTres = document.createElement('h3');//('h'+ index);
+        hTres.innerHTML = 'h3 :'+ index; 
+        divMain.appendChild(hTres);           
+     }
 
+     //II - Parte
+     //1-
+        hOne.className = 'title';
+        //const title = document.getElementsByTagName('h1')[0];
+        //title.className = 'title';
+
+     //2-
+        for (let index = 0; index < 3; index++) {
+            document.getElementsByTagName('h3')[index].className = 'description';           
+        }
+
+     //3-
+      let removeLeft = document.querySelector('.left-content');
+      divMain.removeChild(removeLeft);
+
+     //-4
+     let margAuto = document.querySelector('.right-content'); 
+     margAuto.style.marginRight = 'auto';
+
+     //5-
+     let centerDiv = document.querySelector('.center-content'); 
+     centerDiv.parentNode.style.backgroundColor = 'green';
+
+     //6-
+     ul.lastChild.remove();
+     ul.lastChild.remove();
+     
     </script>
   </body>
 </html>
