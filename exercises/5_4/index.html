@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 5.4</title>
+</head>
+
+<body>
+    <p id="txt">
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+        standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+        a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+        remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+        Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
+        of Lorem Ipsum.
+    </p>
+    <section class="customize">
+        <div id="body-color" class="optionsBody">
+            <span>Cor de fundo</span>
+            <button>black</button>
+            <button>green</button>
+            <button>blue</button>
+        </div>
+        <div id="letra-color" class="optionsLetras">
+            <span>Cor da letra</span>
+            <button>black</button>
+            <button>green</button>
+            <button>blue</button>
+        </div>
+    </section>
+    <script>
+        window.onload = function () {
+            //1
+            function mudarCorFundo(cor) {
+                let fundoBody = document.querySelector('body');
+                fundoBody.style.backgroundColor = cor;
+                localStorage.setItem('backgroundColor', cor);
+            }
+
+            let bodyBkCorBtn = document.querySelectorAll('#body-color>button');
+            for (let index = 0; index < bodyBkCorBtn.length; index++) {
+                bodyBkCorBtn[index].addEventListener('click', () => {
+                    mudarCorFundo(event.target.innerHTML);
+                })
+            }
+            //2
+            function mudarCorLetra(cor) {
+                let corLetra = document.getElementById('txt');
+                corLetra.style.color = cor;
+                localStorage.setItem('color', cor);
+            }
+            let corLetraBtn = document.querySelectorAll('#letra-color>button');
+            for (let index = 0; index < corLetraBtn.length; index++) {
+                corLetraBtn[index].addEventListener('click', () => {
+                    mudarCorLetra(event.target.innerHTML);
+                })
+            }
+        }
+    </script>
+</body>
+
+</html>
