@@ -3,9 +3,15 @@
     margin: 0;
 }
 
+body {
+    align-items: center; 
+}
+
 #main {
     display: flex;
     flex-direction: column;
+    width: 60%;
+    align-items: center;
 }
 
 .cabecalho-form-one {
@@ -13,21 +19,25 @@
     background-color: burlywood;
     height: 10vh;
     text-align: center;
-    padding: 2px;
+    padding: 5px;
+    width: 600px;
 }
 
 .form {
     grid-area: form;
     background-color: cornsilk;
     height: 85vh;
-    text-align: center;
+    text-align: left;
     padding-top: 20px;
+    padding-left: 5px;
+    width: 600px;
 }
 
 .footer {
     grid-area: footer;
-    background-color: rgba(49, 90, 97, 0.171);
+    background-color: rgba(34, 61, 66, 0.219);
     height: 5vh;
+    width: 600px;
 }
 
 .title {
