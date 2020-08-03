@@ -26,7 +26,7 @@ body {
 .form {
     grid-area: form;
     background-color: cornsilk;
-    height: 85vh;
+    height: 80vh;
     text-align: left;
     padding-top: 20px;
     padding-left: 5px;
