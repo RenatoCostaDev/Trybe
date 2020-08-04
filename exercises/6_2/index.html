@@ -22,20 +22,31 @@
   </div>
   <div class="card-body">
     <form class="container-fluid" action="" method="GET">
+      <legend>Dados Pessoais</legend>
       <div class="form-row">
         <div class="col-12">
           <div class="form-group">
             <label for="nome">Nome: </label>
-            <input type="text" class="form-control" id="nome" placeholder="Informe o nome" maxlength="40" required /><br />
+            <input type="text" class="form-control" id="nome" 
+            placeholder="Informe o nome" maxlength="40" required /><br />
           </div>
         </div>
       </div>
-        <legend>Dados Pessoais</legend>
-
-        
-
-        <label for="email">E-mail: </label>
-        <input id="email" type="text" maxlength="50" required /><br />
+      <div class="form-row">
+        <div class="col-12 col-md-6">
+          <div class="form-group">
+            <label for="email">Email: </label>
+            <div class="input-group">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">@</span>
+                </div>
+                <input type="email" class="form-control" id="email" placeholder="Informe o email" maxlength="50" required>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
         <label for="cpf">CPF: </label>
         <input id="cpf" type="text" maxlength="11" required /><br />
