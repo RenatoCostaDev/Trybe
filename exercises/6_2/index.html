@@ -14,14 +14,15 @@
 </head>
 
 <body>
-  <section id="main">
-    <header class="cabecalho-form-one">
-      <div class="title">
-        <h1>FORMULÁRIO</h1>
-      </div>
-    </header>
-    <form class="form" action="" method="GET">
-      <fieldset>
+<div class="card">  
+  <div class="card-header">
+      <h5 class="mb-0">
+      FORMULÁRIO
+      </h5>
+  </div>
+  <div class="card-body">
+    <form class="container-fluid" action="" method="GET">
+     
         <legend>Dados Pessoais</legend>
 
         <label for="nome">Nome: </label>
@@ -48,9 +49,7 @@
           <input id="apartamento" type="radio" name="complemento">
           <label for="apartamento">Apartamento</label>
         </div>
-      </fieldset>
-
-      <fieldset>
+      
 
         <legend>Último emprego</legend>
 
@@ -68,15 +67,18 @@
         <label for="data-termino">Data de término</label>
         <input type="date" id="data-termino">
 
-      </fieldset>
+      
 
       <button type="submit">Enviar !</button>
       <button>Limpar</button>
-
     </form>
+  </div>  
+</div>
+    
     <footer class="footer">&#169;Copyrights</footer>
     <script src="script.js"></script>
   </section>
+
 </body>
 
 </html>
