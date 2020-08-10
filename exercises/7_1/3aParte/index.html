@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      .layout {
+        display: flex;
+        justify-content: space-around;
+      }
+      .btnClick {
+        justify-content: center;
+        padding-top: 20px;
+        font-size: 35px;
+      }
+      #number {
+        font-size: 35px;
+        padding-top: 15px;
+      }
+      .btnMais {
+        padding: 50px;
+      }
+    </style>
+</head>
+<body>
+  <div class="layout">
+    <label class="btnClick">Você clicou</label>
+    <span id="number">0</span>
+    <label class="btnClick">X</label>
+    <button id="btnMais">+</button>
+  </div>
+    <script>
+      const spanClick = document.querySelector('#number');
+      const btnClickMais = document.querySelector('#btnMais');
+      
+      btnClickMais.addEventListener('click', () => {
+        let vezes = spanClick.textContent;
+        vezes++;
+        spanClick.innerHTML = vezes;
+      })
+      
+    </script>
+</body>
+</html>
