@@ -64,18 +64,16 @@ const books = [
 ];
 
 const expected_result = [
-  'As Crônicas de Gelo e Fogo - Fantasia - George R. R. Martin',
-  'O Senhor dos Anéis - Fantasia - J. R. R. Tolkien',
-  'Fundação - Ficção Científica - Isaac Asimov',
-  'Duna - Ficção Científica - Frank Herbert',
-  'A Coisa - Terror - Stephen King',
-  'O Chamado de Cthulhu - Terror - H. P. Lovecraft'
-];
-//Condição
-const structure = book => `${book.name} - ${book.genre} - ${book.author.name}`;
-function formatedBookNames() {
-  return books.map(structure);
+  'Frank Herbert',
+  'George R. R. Martin',
+  'Isaac Asimov',
+  'J. R. R. Tolkien'
+]
+//condição 
+const scienceOrFantasyGenre = book => book.genre === 'Fantasia' || book.genre === 'Ficção Científica';
+const authorName = book => book.author.name;
+function fantasyOrScienceFictionAuthors() {
+    return expected = books.filter(scienceOrFantasyGenre).map(authorName).sort();
 }
-console.log(formatedBookNames());
-
-assert.deepEqual(formatedBookNames(), expected_result);
+console.log(fantasyOrScienceFictionAuthors())
+assert.deepEqual(fantasyOrScienceFictionAuthors(), expected_result);

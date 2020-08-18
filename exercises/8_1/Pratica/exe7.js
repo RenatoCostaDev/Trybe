@@ -64,8 +64,13 @@ const books = [
 ];
 
 const expected_result = false;
+
 //condição
-const authorsWithDifferentBirthYear = (a, b) => (a.birthYear !== b.birthYear) ?  true : false;
-const authorUnique = () => books.some(authorsWithDifferentBirthYear);
-console.log(authorUnique());
+function authorUnique() {
+  return books.every((book)=>
+    !books.some((bookSome)=> 
+      (bookSome.author.birthYear === book.author.birthYear) && (bookSome.id !== book.id)
+  ));
+}
+
 assert.equal(authorUnique(), expected_result);
