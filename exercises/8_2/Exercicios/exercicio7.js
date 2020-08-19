@@ -65,9 +65,9 @@ const books = [
 
 const expected_result = 'O Senhor dos Anéis';
 //Condição
-const threeInicialsStart = book => book.author.name[1] === '.' && book.author.name[4] === '.' && book.author.name[7] === '.';
+const dotEnds = word => (word.endsWith('.'))
 function authorWith3DotsOnName() {
-    return expected = books.filter(threeInicialsStart).map(book => book.name);
+    return books.find(book => (book.author.name.split(' ').filter(dotEnds).length === 3)).name;
 }
 
 assert.deepEqual(authorWith3DotsOnName(), expected_result);
