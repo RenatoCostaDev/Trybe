@@ -1,4 +1,4 @@
-  const estudantes = [
+const estudantes = [
   {
     nome: 'Jorge',
     sobrenome: 'Silva',
@@ -72,9 +72,9 @@
     ]
   },
 ]
-const getBestClass = (acc, class) => {
-  if (acc.nota > class.nota) return acc;
-  return class;
+const getBestClass = (acc, classe) => {
+  if (acc.nota > classe.nota) return acc;
+  return classe;
 };
 
 const reportBetter = (students) => {
