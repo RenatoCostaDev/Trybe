@@ -13,3 +13,18 @@ const LOCAL_FORECAST = {
   tomorrow: { low: 68, high: 80 }
 };  
 // const { today: { low: lowToday, high: highToday }} = LOCAL_FORECAST;  
+let a = 8, b = 6;
+console.log(a, b);
+[a, b] = [b, a];
+console.log(a, b);
+
+const source = [1,2,3,4,5,6,7,8,9,10];
+function removeFirstTwo(list) {
+  "use strict";
+  const  [a,b,...arr] = list ;
+  return arr;
+}
+const arr = removeFirstTwo(source);
+
+const [w, x, z,...word] = 'teste';
+console.log(w);

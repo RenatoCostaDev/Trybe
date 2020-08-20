@@ -29,7 +29,7 @@ const somar = (...numeros) => {
 }
 const sum = (...args) => {
     return args.reduce((a, b) => a + b, 0);
-  }
+}
  
 console.log(somar(1, 2, 3))
 console.log(somar(1, 2, 3, 4, 5, 6))
