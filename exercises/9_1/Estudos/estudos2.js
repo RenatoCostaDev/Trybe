@@ -1,18 +1,20 @@
 const assert = require('assert');
 
-// funções q usam destructuring nos dados recebidos da função(getUser())
 const userFullName = ({ firstName, lastName }) => `Hello! My name is ${firstName} ${lastName}`;
 const userNationality = ({ firstName, nationality }) => `${firstName} is ${nationality}`;
 
-const getUser = () => { // função q retorna um objeto
+const getUser = (functionParameter) => {
   const userToReturn = {
     firstName: "Ivan",
     lastName: "Ivanovich",
     nationality: "Russian"
   };
+  return functionParameter(userToReturn);
 };
+console.log(getUser(userFullName));
+console.log(getUser(userNationality));
 
-setTimeout(() => assert.equal(getUser(userFullName),"Hello! My name is Ivan Ivanovich", 3000));
-setTimeout(() => assert.equal(getUser(userNationality),"Ivan is Russian", 3000));
+assert.equal(getUser(userFullName), "Hello! My name is Ivan Ivanovich"); // complete a chamada da função de getUser
+assert.equal(getUser(userNationality), "Ivan is Russian"); // complete a chamada da função de getUser
 
 

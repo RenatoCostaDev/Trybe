@@ -1,8 +1,8 @@
 const countryName = ({ name }) => console.log(`Returned country is ${name}`);
 const countryCurrency = ({ name, currency }) => console.log(`${name}'s currency is the ${currency}`);
 
+// Condições
 const delay = (maxMilliseconds = 5000) => Math.floor(Math.random() * maxMilliseconds);
-
 const printErrorMessage = (error) => console.log(`Error getting country: ${error}`);
 
 const getCountry = (onSuccess) => {
@@ -15,6 +15,7 @@ const getCountry = (onSuccess) => {
         currency: "Real",
       };
       onSuccess(country);
+      // onSuccess(country, country.currency);
     }
     else {
       const errorMessage = "Country could not be found";
