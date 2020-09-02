@@ -21,5 +21,5 @@ const lesson3 = {
 const addShift = (lesson, key, value) => {
     lesson[key] = value;
 }
-changeShift(lesson2, 'turno', 'manhã');
+// changeShift(lesson2, 'turno', 'manhã');
 console.log(lesson2);
